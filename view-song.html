@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My music groups</title>
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel ="stylesheet" href="./css/musicgroupstable.css" />
+    <link rel="stylesheet" href="./css/view song.css" />
+    <link rel ="stylesheet" href="./css/color-fonts.css"/>
+</head> 
+<body>
+  <div class="GridPage">
+    <div class="GridItemMain">
+      <div class="FlexWrap">
+      <form class="formContainer" id="book" method="post">
+        <div class="formIntroContainer">
+<div>
+  <h1>Song detalies </h1>
+  <h2>
+  About song
+  </h2>
+  </div>
+  <b>Note: an asterisk (*) indicates a required field</b>
+  </div>
+  <fieldset>
+  <legend>Song name</legend>
+  <div class="formInputContainer">
+  <input id="name" name="name" type="text" placeholder="e.g. Fur Elise" required />
+  <label for="name">Name</label>
+  </div>
+  <div class="formInputContainer">
+  <input id="genre" name="genre" type="text" placeholder="e.g.Love" required />
+  <label for="genre">Genre</label>
+  </div>
+  <div class="formInputContainer">
+  <input id="establishedYear" name="establishedYear" type="number" min="0" max="2024" placeholder="e.g.1900" required />
+  <label for="establishedYear">EstablishedYear</label>
+  </div>
+  <button class="form-Submit_Btn" type="submit" value="Submit Redemption">
+    <span class="flipper">
+      <span class="flipper-object flipper-vertical">
+      </span>
+    </span>
+  </button>
+</fieldset>
+  </div>
+  </div>
+
+
+</form>
+
+  <div class="GridItemSideOne">
+    <div class="MenuWrap">
+        <a href="./home.html" class="ListItem">Home</a>
+        <a href="./musicgroupsTable.html" class="ListItem">Music groups</a>
+        <a href="./about.html" class="LastItem">About</a>
+    </div>
+  </div>
+
+
+<div class="GridItemHeader">My music groups</div>
+<div class="GridItemFooter">(c) Alina</div>
+</div>
+<script type="module" src="./script/view-song.js"></script>
+
+</body>
+
+</html>

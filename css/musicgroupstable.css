@@ -1,0 +1,164 @@
+:root {
+    --cell-width: 200px;
+  
+  }
+  
+  body {
+    font-size: 20px;
+  }
+  
+  .tableFluid {
+    width: 100%;
+    padding: 30px;
+    margin: 15px;
+    box-shadow:1px -1px 50px dimgray;
+    background: linear-gradient(
+      rgb(237, 112, 145) ,
+      rgb(234, 192, 179)
+      ) 50px;
+      
+  }
+  
+  .theadFluid .trFluid {
+    background-color: #FFEEDB;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+  }
+  
+  .trFluid {
+    padding: 5px;
+  }
+  .trFluid:hover:not(.head) {
+    transform: scale(1.05);
+    
+  }
+  
+  .trFluid:nth-child(even) {
+    background-color: rgba(154, 208, 194, 0.9);
+    
+  }
+  
+  /* Main container: initialize the flex, direction is row */
+  .trFluid {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    flex-wrap: wrap;
+    width: 100%;
+    color:#135D66;
+	  font-family: var(--FontCustom1);
+    transition:transform 3s;
+  }
+  
+  /* Wrappers around cells and other wrappers: flex, row, wrap */
+  .trFluid_Grouping2, 
+  .trFluid_Grouping1
+  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+  
+  .trFluid_Grouping2.num, 
+  .trFluid_Grouping1.num {
+    flex-grow: 0;
+  }
+  
+  /* Text based cells: grow, truncate and show ellipsis when there is not enough space */
+  .tdFluent {
+    flex-grow: 1; 
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 20px;
+    width: var(--cell-width);
+  }
+  
+  .tdFluent.num {
+    width: var(--cell-width);
+    text-align: right;
+  }
+  
+  
+  /* Media queries: optimize for different screen widths. */
+  
+  /* First breakpoint: all cells, does not fit into one row: break according to Grouping1 */
+  @media (max-width: 1200px) {
+  
+    /* inner wrappers vertical */
+    .trFluid_Grouping1 {
+      /* Let the wrapper flex vertically, so we get 2 rows */
+      flex-direction: column;
+      width: var(--cell-width);
+    }
+  
+    /* can't have the children grow, since this means vertical growth 
+         but let them grow horizontally, 100% to fill the wrapper */
+    .trFluid_Grouping1 div {
+      flex-grow: 0;
+      width: 100%;
+    }
+  }
+ 
+  @media (max-width: 800px) {
+
+    /* inner wrappers vertical */
+    .trFluid_Grouping2 {
+      /* Let the wrapper flex vertically, so we get more rows */
+      flex-direction: column;
+      width: var(--cell-width);
+    }
+  
+    /* can't have the children grow, since this means vertical growth 
+         but let them grow horizontally, 100% to fill the wrapper */
+      .trFluid_Grouping2 div {
+      flex-grow: 0;
+      width: 100%;
+    }
+  }
+  
+  /* Final breakpoint: collapse all cells into one single column 
+     break according to trFluid */
+  @media (max-width: 600px) {
+  
+    /* wrap the main row container */
+    .trFluid {
+      /* Let the wrapper flex vertically, so we get more rows */
+      flex-direction: column;
+    }
+  
+    .trFluid div {
+      flex-grow: 0;
+      width: 100%;
+    }
+  
+    /* force the num cells to left-align to look better */
+    .tdFluent.num {
+      text-align: left;
+    }
+  }
+
+
+/*
+  .trFluid_Grouping1 {
+    border: 1px solid #FAA300;
+    padding: 2px;
+    margin: 2px;
+  }
+  .trFluid_Grouping2 {
+    border: 1px solid palevioletred;
+    margin: 2px;
+  }
+  .trFluid:not(.header){
+    border: 1px solid  grey;
+    margin: 2px;
+  }  
+  .img {
+   size: 10px;
+  }
+  */
+  
+  

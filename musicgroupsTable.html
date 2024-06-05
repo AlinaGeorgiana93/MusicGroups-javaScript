@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My music groups</title>
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/musicgroupstable.css" />
+    <link rel="stylesheet" href="./css/color-fonts.css"/>
+   
+</head>
+<body>
+  <div class="GridPage">
+    <div class="GridItemMain">
+      <div class =SearchContainer> 
+        <div class="row mb-1 text-center">
+          <div class="col-md-8 ">
+            <form class="d-flex mt-3 mt-lg-0" role="search">
+              <input id='search' placeholder="Search for music groups..."/>
+              <button class="btn btn-outline-success"  id="searchInput" onClick={onClick} >Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+        <div class="tableFluid" >
+
+            <div class="theadFluid">
+              <div class="trFluid">
+                <div class="trFluid_Grouping2">
+                  <div class="trFluid_Grouping1">
+                    <div class="tdFluent">Name</div>
+                  </div>
+                  <div class="trFluid_Grouping1">
+                    <div class="tdFluent">EstablishedYear</div>
+                    <div class="tdFluent">Genre</div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="tbodyFluid" id="musicList">
+
+              <div class="trFluid">
+                <div class="trFluid_Grouping2">
+                  <div class="trFluid_Grouping1">
+                    <div class="tdFluent">A Tale of Two Cities</div>
+                  </div>
+                  <div class="trFluid_Grouping1">
+                    <div class="tdFluent">Charles Dickens</div>
+                    <div class="tdFluent">1859</div>
+                   
+                    <a href="./view-song.html">view book</a>
+                  </div>
+                </div>
+              </div>
+              <div class="trFluid">
+                <div class="trFluid_Grouping2">
+                  <div class="trFluid_Grouping1">
+                    <div class="tdFluent">And Then There Were None</div>
+                  </div>
+                  <div class="trFluid_Grouping1">
+                    <div class="tdFluent">Agatha Christie</div>
+                    <div class="tdFluent">1939</div>
+                   
+                    <a href="./view-song.html">view book</a>
+                  </div>
+                </div>
+              </div>
+              <div class="trFluid">
+                <div class="trFluid_Grouping2">
+                  <div class="trFluid_Grouping1">
+                    <div class="tdFluent">Dream of the Red Chamber</div>
+                  </div>
+                  <div class="trFluid_Grouping1">
+                    <div class="tdFluent">Cao Xueqin</div>
+                    <div class="tdFluent">1791</div>
+                 
+                    <a href="./view-song.html">view book</a>
+                  </div>
+              </div>
+              </div>
+
+
+      
+          </div>     
+        </div>
+        <div class="button-container">
+          <button id="btnPrev">Prev</button>
+          <button id="btnNext">Next</button>
+      </div>    
+    </div>
+
+        <div class="GridItemSideOne">
+            <div class="MenuWrap">
+                <a href="./home.html" class="ListItem">Home</a>
+                <a href="./musicgroupsTable.html" class="ListItem">Music groups</a>
+                <a href="./about.html" class="LastItem">About</a>
+            </div>
+        </div>
+
+        <div class="GridItemHeader">My music groups</div>       
+        <div class="GridItemFooter">(c) Alina</div>
+
+    </div>
+    <script type="module" src="./script/musicgrouptable.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,18 @@
+.About {
+    font-family: var(--Font2);
+    font-size: medium;
+    align-content: center;
+    color:var(--color10);
+    box-shadow:1px -1px 50px var(--color2);
+  }
+  .AboutPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.AboutPage .About {
+  max-width: 600px; /* Controls the width of the <p> element */
+  padding: 20px;    /* Optional: Adds some padding around the text */
+  text-align: center; /* Optional: Centers the text inside the <p> element */
+}
